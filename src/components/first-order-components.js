@@ -39,7 +39,12 @@ class Sidebar extends Component {
    render() {
       return(
          <div className="col">
-            <p>Sidebar</p>
+            <div><SideMenuOption/></div>
+            <div><SideMenuOption/></div>
+            <div><SideMenuOption/></div>
+            <div><SideMenuOption/></div>
+            <div><SideMenuOption/></div>
+            <div><SideMenuOption/></div>
          </div>
       );
    }
@@ -48,6 +53,9 @@ class Middle extends Component {
    render() {
       return(
          <div className="col">
+            <div className = "row">
+            <MiddleHeadline/>
+            </div>
             <p>Middle</p>
          </div>
       );
@@ -62,5 +70,23 @@ class Ads extends Component {
       );
    }
 }
+class SideMenuOption extends Component{
+   render(){
+      return(
+         <div className="row">
+            <p>Option</p>
+         </div>
 
+      );
+   }
+}
+class MiddleHeadline extends Component{
+   render(){
+      return(
+         <div>
+            <p>News: Nish releases his new album, armed with a Mercedes, takes Wall Street by storm</p>
+         </div>
+      )
+   }
+}
 export default MainPage;
