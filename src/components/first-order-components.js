@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
 class MainPage extends Component {
    render() {
@@ -16,7 +17,7 @@ class Header extends Component {
       return(
          <div className="row">
             <div className="col">
-               <p>THIS IS THE HEADER</p>
+               <img src={require('../res/banner.png')} height='100px' width='500px' alt = "banner"/>
             </div>
          </div>
       );
@@ -38,13 +39,13 @@ class Media extends Component{
 class Sidebar extends Component {
    render() {
       return(
-         <div className="col">
-            <div><SideMenuOption/></div>
-            <div><SideMenuOption/></div>
-            <div><SideMenuOption/></div>
-            <div><SideMenuOption/></div>
-            <div><SideMenuOption/></div>
-            <div><SideMenuOption/></div>
+         
+         <div className="col-3" >
+            <p className="ml-5"></p>
+            <SideMenuOption></SideMenuOption>
+            <SideMenuOption></SideMenuOption>
+            <SideMenuOption></SideMenuOption>
+            <SideMenuOption></SideMenuOption>
          </div>
       );
    }
@@ -52,11 +53,11 @@ class Sidebar extends Component {
 class Middle extends Component {
    render() {
       return(
-         <div className="col">
+         <div className="col-6">
             <div className = "row">
             <MiddleHeadline/>
             </div>
-            <p>Middle</p>
+            <img src={require('../res/nish.jpg')} height='500px' width='500px' alt = "nish"/>
          </div>
       );
    }
@@ -73,8 +74,12 @@ class Ads extends Component {
 class SideMenuOption extends Component{
    render(){
       return(
-         <div className="row">
-            <p>Option</p>
+         <div className="row-1">
+            <Breadcrumb>
+               <Breadcrumb.Item href="#" divider>
+                  option
+               </Breadcrumb.Item>
+            </Breadcrumb>    
          </div>
 
       );
@@ -84,7 +89,10 @@ class MiddleHeadline extends Component{
    render(){
       return(
          <div>
-            <p>News: Nish releases his new album, armed with a Mercedes, takes Wall Street by storm</p>
+            <p>
+               <img src={require('../res/news.jpg')} height='60px' width='100px' alt = "news"/>
+                Nish releases his new album, armed with a Mercedes, takes Wall Street by storm
+            </p>
          </div>
       )
    }
