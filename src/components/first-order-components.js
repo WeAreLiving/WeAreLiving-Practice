@@ -4,7 +4,7 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb'
 class MainPage extends Component {
    render() {
       return(
-         <div>
+         <div style={{backgroundColor:"lavender"}}>
             <Header/>
             <Media/>
          </div>
@@ -17,7 +17,10 @@ class Header extends Component {
       return(
          <div className="row">
             <div className="col">
-               <img src={require('../res/banner.png')} height='100px' width='500px' alt = "banner"/>
+               <div style={{marginTop: '1rem', marginLeft: '26.5rem'}}>
+                  <img src={require('../res/banner.png')} height='100px' width='500px' alt = "banner"/>
+               </div>
+               
             </div>
          </div>
       );
@@ -41,11 +44,12 @@ class Sidebar extends Component {
       return(
          
          <div className="col-3" >
-            <p className="ml-5"></p>
-            <SideMenuOption></SideMenuOption>
-            <SideMenuOption></SideMenuOption>
-            <SideMenuOption></SideMenuOption>
-            <SideMenuOption></SideMenuOption>
+            <div style={{  padding: '3rem'}}>
+               <SideMenuOption></SideMenuOption>
+               <SideMenuOption></SideMenuOption>
+               <SideMenuOption></SideMenuOption>
+               <SideMenuOption></SideMenuOption>
+            </div>
          </div>
       );
    }
@@ -55,9 +59,11 @@ class Middle extends Component {
       return(
          <div className="col-6">
             <div className = "row">
-            <MiddleHeadline/>
-            </div>
-            <img src={require('../res/nish.jpg')} height='500px' width='500px' alt = "nish"/>
+               <div style = {{marginTop: '2rem'}}>
+                  <MiddleHeadline/>
+               </div>
+                  <img src={require('../res/nish.jpg')} height='500px' width='500px' alt = "nish"/>
+               </div>
          </div>
       );
    }
@@ -66,7 +72,10 @@ class Ads extends Component {
    render() {
       return(
          <div className="col">
-            <p>Ads</p>
+            <div style = {{fontFamily : '"Copperplate"', fontSize:"1.4rem", marginTop:"3rem", marginLeft:"5rem"}}>
+               <p>Featured Sponsors</p>
+            </div>
+            
          </div>
       );
    }
@@ -75,11 +84,16 @@ class SideMenuOption extends Component{
    render(){
       return(
          <div className="row-1">
-            <Breadcrumb>
-               <Breadcrumb.Item href="#" divider>
-                  option
-               </Breadcrumb.Item>
-            </Breadcrumb>    
+            <div style={ {borderStyle: ' none none groove none', width:'90%', textAlign: 'center'} }>
+               <Breadcrumb>
+                  <Breadcrumb.Item href="#" active>
+                     <div style={{color: 'black',  fontFamily: ' "Georgia", "Courier New", monospace'}}>
+                        menu option 
+                     </div>  
+                  </Breadcrumb.Item>
+               </Breadcrumb> 
+            </div>
+   
          </div>
 
       );
@@ -89,10 +103,13 @@ class MiddleHeadline extends Component{
    render(){
       return(
          <div>
-            <p>
-               <img src={require('../res/news.jpg')} height='60px' width='100px' alt = "news"/>
-                Nish releases his new album, armed with a Mercedes, takes Wall Street by storm
-            </p>
+            <div >
+               <img src={require('../res/news.png')} height='60px' width='100px' alt = "news" style={{}}/>
+               <div style={{ fontFamily:"impact"}}>
+                 Nish releases his new album, armed with a Mercedes, takes Wall Street by storm
+               </div>
+                
+            </div>
          </div>
       )
    }
