@@ -15,12 +15,11 @@ class MainPage extends Component {
 class Header extends Component {
    render() {
       return(
-         <div className="row">
-            <div className="col">
-               <div style={{marginTop: '1rem', marginLeft: '26.5rem'}}>
-                  <img src={require('../res/banner.png')} height='100px' width='500px' alt = "banner"/>
+         <div className="container">
+            <div className="row">
+               <div className="col d-flex justify-content-center">
+                  <img src={require('../res/banner.png')}  width='500px' className="img-fluid" alt="banner" />
                </div>
-               
             </div>
          </div>
       );
